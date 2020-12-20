@@ -11,9 +11,10 @@ using System.Threading.Tasks;
 namespace task_4_7_kg
 {
     class Vector4
-    {
+    { 
         private float[] values;
-        public const float EPS = 1e-12f;
+        private const float EPS = 1e-12f;
+        private const int SIZE = 4; 
 
         public Vector4(float x, float y, float z, float w)
         {
@@ -30,6 +31,10 @@ namespace task_4_7_kg
         public Vector4(Vector3 vector)
         {
             this.values = new float[] { vector.GetX(), vector.GetY(), vector.GetZ(), 0 };
+        }
+        private Vector4(float[] arr)
+        {
+            this.values = arr; 
         }
 
         public float GetX()
@@ -54,7 +59,7 @@ namespace task_4_7_kg
         }
 
         /**
-         *  Возвращает нормализованный вектор по компоненте W ветор
+         *  Возвращает нормализованный вектор по компоненте W 
          *  @return новый экземпляр {@link Vector4}
          */
         public Vector4 Normalized()
@@ -65,10 +70,28 @@ namespace task_4_7_kg
             }
             return new Vector4(GetX()/GetW(), GetY()/GetW(), GetZ()/GetW(), 1f);
         }
+        /**
+        *  Возвращает вектор полностью заполнеными нулями
+        *  @return нулевой вектор {@link Vector4}
+        */
         public static Vector4 ZeroVector()
         {
-            return new Vector4(0, 0, 0, 0);
+            return new Vector4(new float[4]);
         }
 
+        public Vector4 Multiplare(float number)
+        {
+            float[] result = new float[4];
+            for (int i = 0; i < SIZE; i++)
+                result[i] = this.GetForIndex(i) * number; 
+            return new Vector4(result); 
+        }
+        public Vector4 Addition(float number)
+        {
+            float[] result = new float[4];
+            for (int i = 0; i < SIZE; i++)
+                result[i] = this.GetForIndex(i) + number;
+            return new Vector4(result);
+        }
     }
 }

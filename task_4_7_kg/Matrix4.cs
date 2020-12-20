@@ -78,14 +78,24 @@ namespace task_4_7_kg
         public Matrix4 Multiplare(Matrix4 other)
         {
             Matrix4 result = Matrix4.ZeroMatrix();
-            for (int i = 0; i < SIZE; i++){
-                for (int j = 0; j < SIZE; j++){
+            for (int i = 0; i < SIZE; i++)
+            {
+                for (int j = 0; j < SIZE; j++)
+                {
                     float sum = 0;
                     for (int k = 0; k < SIZE; k++)
                         sum += this.GetFromIndex(i, k) * other.GetFromIndex(k, j);
                     result.SetFromIndex(i, j, sum);
                 }
             }
+            return result;
+        }
+        public Matrix4 Addition(Matrix4 other)
+        {
+            Matrix4 result = Matrix4.ZeroMatrix();
+            for (int i = 0; i < SIZE; i++)
+                for (int j = 0; j < SIZE; j++)
+                    result.SetFromIndex(j, j, this.GetFromIndex(i, j) + other.GetFromIndex(i, j));
             return result;
         }
     }
