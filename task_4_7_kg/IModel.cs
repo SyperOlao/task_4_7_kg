@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task_4_7_kg
 {
-     /*
+     /**
       * Описывает трехмерную модель в общем виде  
       */
     interface IModel

@@ -19,19 +19,19 @@ namespace task_4_7_kg
 
         }
 
-        public float getX()
+        public float GetX()
         {
             return values[0]; 
         }
-        public float getY()
+        public float GetY()
         {
             return values[1];
         }
-        public float getZ()
+        public float GetZ()
         {
             return values[2];
         }
-        public float getForIndex(int index)
+        public float GetForIndex(int index)
         {
             return values[index];
         }

@@ -23,8 +23,7 @@ namespace task_4_7_kg
         }
         
         public void Draw(Graphics graphics)
-        {
-            Vector3 vector;
+        { 
 
         }
     }
