@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  */
 namespace task_4_7_kg
 {
-    class Vector3
+    public class Vector3
     {
         private float []values; 
 
