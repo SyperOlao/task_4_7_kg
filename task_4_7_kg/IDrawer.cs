@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
 namespace task_4_7_kg
 {
-    class Scena
+    interface IDrawer
     {
-        private List<IModel> models;// = new ArrayList<IModel>();
-        
+        void Draw(List<PolyLines3D> lines);
     }
 }

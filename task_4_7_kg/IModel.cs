@@ -11,8 +11,7 @@ namespace task_4_7_kg
       */
     interface IModel
     {
-        List<PolyLines3D> GeyLines(); 
-
+        List<PolyLines3D> GetLines(); 
 
     }
 }
